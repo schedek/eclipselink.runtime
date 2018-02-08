@@ -467,7 +467,7 @@ public class SchemaManager {
                 break;
             }
         }
-        String sql = "SELECT " + column + " FROM " + table.getFullName() + " WHERE " + column + " <> " + column;
+        String sql = "SELECT " + column + " FROM " + table.getFullName() + " WHERE FALSE";
         DataReadQuery query = new DataReadQuery(sql);
         query.setMaxRows(1);
         boolean loggingOff = session.isLoggingOff();
